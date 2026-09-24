@@ -1,0 +1,149 @@
+PASS Eleven available products
+PASS orbital-gate correct OC price
+PASS orbital-gate correct WebP decoded
+PASS orbital-gate image is not cropped
+PASS orbital-gate real JPG fallback
+PASS astra-suit correct OC price
+PASS astra-suit correct WebP decoded
+PASS astra-suit image is not cropped
+PASS astra-suit real JPG fallback
+PASS nova-link correct OC price
+PASS nova-link correct WebP decoded
+PASS nova-link image is not cropped
+PASS nova-link real JPG fallback
+PASS nomi correct OC price
+PASS nomi correct WebP decoded
+PASS nomi image is not cropped
+PASS nomi real JPG fallback
+PASS aero-pack correct OC price
+PASS aero-pack correct WebP decoded
+PASS aero-pack image is not cropped
+PASS aero-pack real JPG fallback
+PASS terra-bloom correct OC price
+PASS terra-bloom correct WebP decoded
+PASS terra-bloom image is not cropped
+PASS terra-bloom real JPG fallback
+PASS ares correct OC price
+PASS ares correct WebP decoded
+PASS ares image is not cropped
+PASS ares real JPG fallback
+PASS vela correct OC price
+PASS vela correct WebP decoded
+PASS vela image is not cropped
+PASS vela real JPG fallback
+PASS noctis correct OC price
+PASS noctis correct WebP decoded
+PASS noctis image is not cropped
+PASS noctis real JPG fallback
+PASS luma correct OC price
+PASS luma correct WebP decoded
+PASS luma image is not cropped
+PASS luma real JPG fallback
+PASS helios correct OC price
+PASS helios correct WebP decoded
+PASS helios image is not cropped
+PASS helios real JPG fallback
+PASS all filter count
+PASS personal-technology filter count
+PASS space-exploration filter count
+PASS transport filter count
+PASS communication filter count
+PASS orbital-living filter count
+PASS Homepage category links resolve
+PASS Discontinued Nova Pod excluded from search
+PASS Discontinued Atlas Core excluded from search
+PASS Missing Orbit Vision is not listed
+PASS orbital-gate can be added to cart
+PASS astra-suit can be added to cart
+PASS nova-link can be added to cart
+PASS nomi can be added to cart
+PASS aero-pack can be added to cart
+PASS terra-bloom can be added to cart
+PASS ares can be added to cart
+PASS vela can be added to cart
+PASS noctis can be added to cart
+PASS luma can be added to cart
+PASS helios can be added to cart
+PASS Cart live count includes all eleven products
+PASS Cart subtotal uses all current OC prices
+PASS Quantity increment recalculates OC subtotal
+PASS Cart persists across pages
+PASS Cart persists across reload
+PASS Home features three personal products
+PASS Home distinguishes larger exploration systems
+PASS Home price shares product dataset
+PASS Checkout explains Orbit Credits
+PASS Checkout OC summary matches cart
+PASS Required checkout fields block submission
+PASS Confirmation uses OC total
+PASS Completed simulation clears cart
+PASS Legacy cart excludes retired and invalid IDs
+PASS Retired IDs removed from persisted cart
+PASS Legacy items use updated OC prices
+PASS Remove cart item
+PASS Clear cart
+PASS Malformed storage recovers
+PASS Global search finds new product
+PASS Global search displays OC price
+PASS Product modal shares OC price
+PASS Product dialog loads supplied image
+PASS Enquiry demonstration still works
+PASS Orbital Gate page uses shared price
+PASS Existing world selection preserved
+PASS Dialog focus trap preserved
+PASS Contact confirmation preserved
+PASS index.html fits 1440px
+PASS No old catalogue or USD text: index.html at 1440
+PASS pages/shop.html fits 1440px
+PASS No old catalogue or USD text: pages/shop.html at 1440
+PASS pages/orbital-gate.html fits 1440px
+PASS No old catalogue or USD text: pages/orbital-gate.html at 1440
+PASS pages/about.html fits 1440px
+PASS No old catalogue or USD text: pages/about.html at 1440
+PASS pages/connected-worlds.html fits 1440px
+PASS No old catalogue or USD text: pages/connected-worlds.html at 1440
+PASS index.html fits 1024px
+PASS No old catalogue or USD text: index.html at 1024
+PASS pages/shop.html fits 1024px
+PASS No old catalogue or USD text: pages/shop.html at 1024
+PASS pages/orbital-gate.html fits 1024px
+PASS No old catalogue or USD text: pages/orbital-gate.html at 1024
+PASS pages/about.html fits 1024px
+PASS No old catalogue or USD text: pages/about.html at 1024
+PASS pages/connected-worlds.html fits 1024px
+PASS No old catalogue or USD text: pages/connected-worlds.html at 1024
+PASS index.html fits 768px
+PASS No old catalogue or USD text: index.html at 768
+PASS pages/shop.html fits 768px
+PASS No old catalogue or USD text: pages/shop.html at 768
+PASS pages/orbital-gate.html fits 768px
+PASS No old catalogue or USD text: pages/orbital-gate.html at 768
+PASS pages/about.html fits 768px
+PASS No old catalogue or USD text: pages/about.html at 768
+PASS pages/connected-worlds.html fits 768px
+PASS No old catalogue or USD text: pages/connected-worlds.html at 768
+PASS index.html fits 390px
+PASS No old catalogue or USD text: index.html at 390
+PASS pages/shop.html fits 390px
+PASS No old catalogue or USD text: pages/shop.html at 390
+PASS pages/orbital-gate.html fits 390px
+PASS No old catalogue or USD text: pages/orbital-gate.html at 390
+PASS pages/about.html fits 390px
+PASS No old catalogue or USD text: pages/about.html at 390
+PASS pages/connected-worlds.html fits 390px
+PASS No old catalogue or USD text: pages/connected-worlds.html at 390
+PASS index.html fits 320px
+PASS No old catalogue or USD text: index.html at 320
+PASS pages/shop.html fits 320px
+PASS No old catalogue or USD text: pages/shop.html at 320
+PASS pages/orbital-gate.html fits 320px
+PASS No old catalogue or USD text: pages/orbital-gate.html at 320
+PASS pages/about.html fits 320px
+PASS No old catalogue or USD text: pages/about.html at 320
+PASS pages/connected-worlds.html fits 320px
+PASS No old catalogue or USD text: pages/connected-worlds.html at 320
+PASS Mobile menu keeps background inert
+PASS Mobile cart opens
+PASS Failed WebP falls back to supplied JPG
+PASS No JavaScript runtime errors: []
+PASS No failed local assets: []

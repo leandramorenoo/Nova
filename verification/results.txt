@@ -1,0 +1,75 @@
+PASS index.html fits 1440px
+PASS pages/shop.html fits 1440px
+PASS pages/orbital-gate.html fits 1440px
+PASS pages/connected-worlds.html fits 1440px
+PASS pages/about.html fits 1440px
+PASS index.html fits 1024px
+PASS pages/shop.html fits 1024px
+PASS pages/orbital-gate.html fits 1024px
+PASS pages/connected-worlds.html fits 1024px
+PASS pages/about.html fits 1024px
+PASS index.html fits 768px
+PASS pages/shop.html fits 768px
+PASS pages/orbital-gate.html fits 768px
+PASS pages/connected-worlds.html fits 768px
+PASS pages/about.html fits 768px
+PASS index.html fits 390px
+PASS pages/shop.html fits 390px
+PASS pages/orbital-gate.html fits 390px
+PASS pages/connected-worlds.html fits 390px
+PASS pages/about.html fits 390px
+PASS index.html fits 320px
+PASS pages/shop.html fits 320px
+PASS pages/orbital-gate.html fits 320px
+PASS pages/connected-worlds.html fits 320px
+PASS pages/about.html fits 320px
+PASS all category filter
+PASS transport category filter
+PASS exploration category filter
+PASS communication category filter
+PASS orbital category filter
+PASS colonization category filter
+PASS Empty search state
+PASS Filter reset
+PASS Add product and live count
+PASS Increase quantity
+PASS Decrease quantity
+PASS Cart persists across pages and reload
+PASS Checkout validation
+PASS Demo checkout confirmation
+PASS Checkout clears collection
+PASS Clear collection
+PASS Remove product
+PASS Invalid JSON storage recovery
+PASS Saved data validation and quantity cap
+PASS Global product search
+PASS Request-only product cannot be added
+PASS Request access confirmation
+PASS World deep link
+PASS terra node selection
+PASS ares node selection
+PASS vela node selection
+PASS noctis node selection
+PASS luma node selection
+PASS Arrow-key world selection
+PASS Selected-world traffic dialog
+PASS Modal forward focus trap
+PASS Modal reverse focus trap
+PASS Escape closes dialog
+PASS Dialog restores original focus
+PASS Contact required-field validation
+PASS Contact email validation
+PASS Contact demonstration confirmation
+PASS Contact form resets
+PASS Mobile menu opens
+PASS Mobile background inert
+PASS Mobile Escape closes menu
+PASS Mobile cart opens
+PASS Menu restores background state
+PASS Reduced motion uses native scrolling
+PASS Bundled Lenis initializes
+PASS Changing reduced-motion preference destroys Lenis
+PASS No JavaScript runtime errors
+PASS No failed HTTP assets
+Runtime errors: []
+Failed assets: []
