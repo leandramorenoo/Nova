@@ -7,7 +7,7 @@ function t(t,e,i){return Math.max(t,Math.min(e,i))}var e=class{isRunning=!1;valu
   function initEntryLoader() {
     const logoSource = document.querySelector('.site-nav__mark')?.getAttribute('src');
     const loader = document.createElement('div');
-    const displayDuration = 1500;
+    const displayDuration = document.body.dataset.page === 'shop' ? 800 : 1500;
     const exitDuration = 300;
     loader.className = 'page-loader';
     loader.setAttribute('aria-hidden', 'true');
@@ -384,9 +384,9 @@ function t(t,e,i){return Math.max(t,Math.min(e,i))}var e=class{isRunning=!1;valu
     }
   }
 
-  let savedTheme = 'light';
-  try { savedTheme = localStorage.getItem(themeStorageKey) === 'dark' ? 'dark' : 'light'; }
-  catch { /* Use the light theme when storage is unavailable. */ }
+  let savedTheme = 'dark';
+  try { savedTheme = localStorage.getItem(themeStorageKey) === 'light' ? 'light' : 'dark'; }
+  catch { /* Use the dark theme when storage is unavailable. */ }
   applyTheme(savedTheme, false);
 
 
@@ -438,13 +438,13 @@ function t(t,e,i){return Math.max(t,Math.min(e,i))}var e=class{isRunning=!1;valu
   function specMarkup(product) {
     return `<dl class="spec-list">${product.specs.map(([label, value]) => `<div class="spec-list__item"><dt>${label}</dt><dd>${value}</dd></div>`).join('')}</dl>`;
   }
-  function cardMarkup(product, featured = false) {
+  function cardMarkup(product, featured = false, priority = false) {
     const tag = featured ? 'h3' : 'h2';
     const className = featured ? '' : product.layout ? ` product-card--${product.layout}` : '';
     const detail = product.id === 'orbital-gate'
       ? `<a class="product-card__action" href="${prefix}pages/orbital-gate.html">View product ↗</a>`
       : `<button class="product-card__action" data-action="details" data-product="${product.id}">View product<span class="sr-only">: ${product.name}</span> ↗</button>`;
-    return `<article class="product-card${className}" data-product-card="${product.id}"><div class="product-card__top"><span class="eyebrow muted">${categoryLabels[product.category]}</span><span class="badge">${product.availability}</span></div><div class="product-card__visual">${productPicture(product)}</div><div class="product-card__info"><p class="product-card__category">${product.type}</p><${tag}>${product.name.toUpperCase()}</${tag}><p class="product-card__description">${product.description}</p>${!featured && product.layout === 'featured' ? specMarkup(product) : ''}</div><div class="product-card__bottom"><span class="product-card__price">${formatPrice(product.price)}</span><div class="product-card__actions">${detail}<button class="product-card__buy" data-action="add" data-product="${product.id}">Add to cart<span class="sr-only">: ${product.name}</span> +</button></div></div></article>`;
+    return `<article class="product-card${className}" data-product-card="${product.id}"><div class="product-card__top"><span class="eyebrow muted">${categoryLabels[product.category]}</span><span class="badge">${product.availability}</span></div><div class="product-card__visual">${productPicture(product, '', priority)}</div><div class="product-card__info"><p class="product-card__category">${product.type}</p><${tag}>${product.name.toUpperCase()}</${tag}><p class="product-card__description">${product.description}</p>${!featured && product.layout === 'featured' ? specMarkup(product) : ''}</div><div class="product-card__bottom"><span class="product-card__price">${formatPrice(product.price)}</span><div class="product-card__actions">${detail}<button class="product-card__buy" data-action="add" data-product="${product.id}">Add to cart<span class="sr-only">: ${product.name}</span> +</button></div></div></article>`;
   }
   const featuredSelections = {personal:['astra-suit','nova-link','nomi'], exploration:['orbital-gate','ares']};
   $$('[data-featured-products]').forEach(grid => {
@@ -460,7 +460,7 @@ function t(t,e,i){return Math.max(t,Math.min(e,i))}var e=class{isRunning=!1;valu
     if (!catalogue) return;
     const term = catalogueSearch.value.trim().toLowerCase();
     const matches = products.filter(p => (activeCategory === 'all' || p.category === activeCategory) && `${p.name} ${p.type} ${categoryLabels[p.category]} ${p.description}`.toLowerCase().includes(term));
-    catalogue.innerHTML = matches.length ? matches.map(p => cardMarkup(p)).join('') : '<div class="catalogue__empty"><h2>No products found.</h2><p>Try another category or a different search.</p><button class="text-link" data-action="reset-filters">Reset filters ↗</button></div>';
+    catalogue.innerHTML = matches.length ? matches.map((p, index) => cardMarkup(p, false, index < 4)).join('') : '<div class="catalogue__empty"><h2>No products found.</h2><p>Try another category or a different search.</p><button class="text-link" data-action="reset-filters">Reset filters ↗</button></div>';
     $('[data-result-count]').textContent = `${matches.length} ${matches.length === 1 ? 'product' : 'products'} available`;
     attachTilt();
   }
@@ -728,7 +728,7 @@ function t(t,e,i){return Math.max(t,Math.min(e,i))}var e=class{isRunning=!1;valu
   /* 12. Animations and responsive interactions */
   function setupStorytelling() {
     if (motionPreference.matches || !('IntersectionObserver' in window)) return;
-    const sections = $$('.site-main > section');
+    const sections = $$('.site-main > section:not([data-catalogue])');
     sections.forEach((section, index) => {
       section.classList.add('story-section');
       if (index > 0) section.classList.add('story-section--pending');
