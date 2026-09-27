@@ -384,9 +384,9 @@ function t(t,e,i){return Math.max(t,Math.min(e,i))}var e=class{isRunning=!1;valu
     }
   }
 
-  let savedTheme = 'dark';
-  try { savedTheme = localStorage.getItem(themeStorageKey) === 'light' ? 'light' : 'dark'; }
-  catch { /* Use the dark theme when storage is unavailable. */ }
+  let savedTheme = 'light';
+  try { savedTheme = localStorage.getItem(themeStorageKey) === 'dark' ? 'dark' : 'light'; }
+  catch { /* Use the light theme when storage is unavailable. */ }
   applyTheme(savedTheme, false);
 
 

@@ -175,7 +175,7 @@ p { max-width: 42rem; }
 .destination__copy p { margin-top: var(--space-md); font-size: var(--text-sm); }
 .destination__image { min-height: 25rem; }
 .destination__image img { mix-blend-mode: normal; }
-[data-theme='dark'] .section--dark, [data-theme='dark'] .destination { background: var(--lavender); color: var(--cream); }
+[data-theme='dark'] .section--dark, [data-theme='dark'] .destination { background: var(--lavender); color: var(--plum); }
 [data-theme='dark'] .home-hero { background: radial-gradient(ellipse at 85% 38%, var(--ice-glass), var(--clear) 47%), linear-gradient(115deg, var(--cream), var(--lavender) 70%); }
 /* 9. Shop */
 .shop-tools { padding: 0 var(--gutter) var(--space-md); }
